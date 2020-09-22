@@ -11,5 +11,5 @@ dist
 *.egg-info
 /.tox/
 venv/*
-doc/build/_*
-doc/source/_*
+docs/build/_*
+docs/source/_*
