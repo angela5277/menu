@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to menu’s documentation! &#8212; menu 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-menu-s-documentation">
+<h1>Welcome to menu’s documentation!<a class="headerlink" href="#welcome-to-menu-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">menu</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#module-menu.menu" title="menu.menu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">menu.menu</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#module-menu.notebook" title="menu.notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">menu.notebook</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="module-menu.notebook"></span><dl class="py class">
+<dt id="menu.notebook.Note">
+<em class="property">class </em><code class="sig-prename descclassname">menu.notebook.</code><code class="sig-name descname">Note</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">memo</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#menu.notebook.Note" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represent a note in the notebook. Match against a
+string in searches and store tags for each note.</p>
+<dl class="py method">
+<dt id="menu.notebook.Note.match">
+<code class="sig-name descname">match</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#menu.notebook.Note.match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if this note matches the filter
+text. Return True if it matches, False otherwise.</p>
+<p>Search is case sensitive and matches both text and
+tags.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="menu.notebook.Notebook">
+<em class="property">class </em><code class="sig-prename descclassname">menu.notebook.</code><code class="sig-name descname">Notebook</code><a class="headerlink" href="#menu.notebook.Notebook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represent a collection of notes that can be tagged,
+modified, and searched.</p>
+<dl class="py method">
+<dt id="menu.notebook.Notebook.modify_memo">
+<code class="sig-name descname">modify_memo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">note_id</span></em>, <em class="sig-param"><span class="n">memo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#menu.notebook.Notebook.modify_memo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the note with the given id and change its
+memo to the given value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="menu.notebook.Notebook.modify_tags">
+<code class="sig-name descname">modify_tags</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">note_id</span></em>, <em class="sig-param"><span class="n">tags</span></em><span class="sig-paren">)</span><a class="headerlink" href="#menu.notebook.Notebook.modify_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the note with the given id and change its
+tags to the given value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="menu.notebook.Notebook.new_note">
+<code class="sig-name descname">new_note</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">memo</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#menu.notebook.Notebook.new_note" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new note and add it to the list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="menu.notebook.Notebook.search">
+<code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#menu.notebook.Notebook.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find all notes that match the given filter
+string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-menu.menu"></span><dl class="py class">
+<dt id="menu.menu.Menu">
+<em class="property">class </em><code class="sig-prename descclassname">menu.menu.</code><code class="sig-name descname">Menu</code><a class="headerlink" href="#menu.menu.Menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Display a menu and respond to choices when run.</p>
+<dl class="py method">
+<dt id="menu.menu.Menu.add_note">
+<code class="sig-name descname">add_note</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.menu.Menu.add_note" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="menu.menu.Menu.display_menu">
+<code class="sig-name descname">display_menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.menu.Menu.display_menu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="menu.menu.Menu.modify_note">
+<code class="sig-name descname">modify_note</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.menu.Menu.modify_note" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="menu.menu.Menu.quit">
+<code class="sig-name descname">quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.menu.Menu.quit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="menu.menu.Menu.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.menu.Menu.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the menu and respond to choices.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="menu.menu.Menu.search_notes">
+<code class="sig-name descname">search_notes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.menu.Menu.search_notes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="menu.menu.Menu.show_notes">
+<code class="sig-name descname">show_notes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">notes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#menu.menu.Menu.show_notes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">menu</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, angela.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
